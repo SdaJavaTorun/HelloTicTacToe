@@ -7,7 +7,8 @@
   </head>
   <body>
     <%--Hello <%=request.getAttribute("who") %>!--%>
-
+    <def:kotek imie="Filemon" nazwisko="Kot"/>
+    <def:kotek imie="Bonifacy" nazwisko="Kot"/>
     <% String who = (String) request.getAttribute("who"); %>
 
   <div>

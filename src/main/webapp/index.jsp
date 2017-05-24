@@ -4,6 +4,6 @@
     <title>Hello World by JSP</title>
   </head>
   <body>
-    Hello <%=who%>
+    Hello World
   </body>
 </html>
