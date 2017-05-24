@@ -1,4 +1,5 @@
 <%@ page import="pl.sdacademy.model.TicTacToe" %>
+<%@ taglib prefix="def" tagdir="/WEB-INF/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -20,115 +21,39 @@
 <body>
 <a href="nacisnijpole?nowagra=true">NOWA GRA</a>
 <br/><br/>
-<%
-    TicTacToe ticTacToe = (TicTacToe) request.getAttribute("board");
-%>
+
 <table border="0" cellpadding="0" cellspacing="0">
     <tr>
         <td style="border-right: 1px solid black;border-bottom: 1px solid black" class="win">
-            <% if (ticTacToe.getField(0, 0) == 0 ) { %>
-            <a href="nacisnijpole?x=0&y=0">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(0, 0) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(0, 0) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="0" y="0" />
         </td>
         <td style="border-right: 1px solid black;border-bottom: 1px solid black">
-            <ghi:field x="1" y="0" model="${ticTacToe}" />
-
-            <% if (ticTacToe.getField(1, 0) == 0 ) { %>
-            <a href="nacisnijpole?x=1&y=0">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(1, 0) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(1, 0) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="1" y="0" />
         </td>
         <td style="border-bottom: 1px solid black">
-            <% if (ticTacToe.getField(2, 0) == 0 ) { %>
-            <a href="nacisnijpole?x=2&y=0">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(2, 0) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(2, 0) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="2" y="0" />
         </td>
     </tr>
     <tr>
         <td style="border-right: 1px solid black;border-bottom: 1px solid black">
-            <% if (ticTacToe.getField(0, 1) == 0 ) { %>
-            <a href="nacisnijpole?x=0&y=1">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(0, 1) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(0, 1) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="0" y="1" />
         </td>
         <td style="border-right: 1px solid black;border-bottom: 1px solid black">
-            <% if (ticTacToe.getField(1, 1) == 0 ) { %>
-            <a href="nacisnijpole?x=1&y=1">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(1, 1) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(1, 1) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="1" y="1" />
         </td>
         <td style="border-bottom: 1px solid black">
-            <% if (ticTacToe.getField(2, 1) == 0 ) { %>
-            <a href="nacisnijpole?x=2&y=1">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(2, 1) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(2, 1) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="2" y="1" />
         </td>
     </tr>
     <tr>
         <td style="border-right: 1px solid black;">
-            <% if (ticTacToe.getField(0, 2) == 0 ) { %>
-            <a href="nacisnijpole?x=0&y=2">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(0, 2) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(0, 2) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="0" y="2" />
         </td>
         <td style="border-right: 1px solid black;">
-            <% if (ticTacToe.getField(1, 2) == 0 ) { %>
-            <a href="nacisnijpole?x=1&y=2">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(1, 2) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(1, 2) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="1" y="2" />
         </td>
         <td style="">
-            <% if (ticTacToe.getField(2, 2) == 0 ) { %>
-            <a href="nacisnijpole?x=2&y=2">&nbsp;</a>
-            <% } %>
-            <% if (ticTacToe.getField(2, 2) == 1 ) { %>
-            O
-            <% } %>
-            <% if (ticTacToe.getField(2, 2) == 2 ) { %>
-            X
-            <% } %>
+            <def:tictactoe board="${board}" x="2" y="2" />
         </td>
     </tr>
 </table>
