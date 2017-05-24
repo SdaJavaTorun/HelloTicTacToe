@@ -1,0 +1,21 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>Example TLD</short-name>
+
+    <tag>
+        <name>Hello</name>
+        <tag-class>pl.sdacademy.HelloTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>who</name>
+            <required>yes</required>
+            <rtexprvalue>yes</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>Bold</name>
+        <tag-class>pl.sdacademy.BoldTag</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+</taglib>

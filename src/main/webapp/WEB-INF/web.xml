@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+
+    <!--<filter>-->
+        <!--<filter-name>FilterLog</filter-name>-->
+        <!--<filter-class>pl.sdacademy.LogFilter</filter-class>-->
+    <!--</filter>-->
+
+    <!--<filter-mapping>-->
+        <!--<filter-name>FilterLog</filter-name>-->
+        <!--<url-pattern>/hello</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--<servlet>-->
+        <!--<servlet-name>HelloServlet</servlet-name>-->
+        <!--<servlet-class>pl.sdacademy.HelloServlet</servlet-class>-->
+    <!--</servlet>-->
+
+    <!--<servlet>-->
+        <!--<servlet-name>HelloWorldServlet</servlet-name>-->
+        <!--<servlet-class>pl.sdacademy.HelloWorldServlet</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>first</param-name>-->
+            <!--&lt;!&ndash;<param-value>1</param-value>&ndash;&gt;-->
+            <!--<param-value>2</param-value>-->
+        <!--</init-param>-->
+    <!--</servlet>-->
+
+    <servlet>
+        <servlet-name>TicTacToe</servlet-name>
+        <servlet-class>pl.sdacademy.TicTacToeServlet</servlet-class>
+    </servlet>
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>HelloServlet</servlet-name>-->
+        <!--<url-pattern>/hello</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+   <servlet-mapping>
+        <servlet-name>TicTacToe</servlet-name>
+        <url-pattern>/nacisnijpole</url-pattern>
+    </servlet-mapping>
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>TicTacToe</servlet-name>-->
+        <!--<url-pattern>/</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>HelloWorldServlet</servlet-name>-->
+        <!--<url-pattern>/helloworld</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>HelloJspServlet</servlet-name>
+        <servlet-class>pl.sdacademy.HelloJspServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloJspServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloJspTemplate</servlet-name>
+        <jsp-file>/hello.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloJspTemplate</servlet-name>
+        <url-pattern>/hello.jsp</url-pattern>
+    </servlet-mapping>
+
+   <servlet>
+        <servlet-name>TicTacToeJspTemplate</servlet-name>
+        <jsp-file>/tictactoe.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TicTacToeJspTemplate</servlet-name>
+        <url-pattern>/tictactoe.jsp</url-pattern>
+    </servlet-mapping>
+
+</web-app>
