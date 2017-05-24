@@ -57,19 +57,6 @@
         </td>
     </tr>
 </table>
-<%
-    if (ticTacToe.isOWinner()) {
-%>
-    Wygrały kółka
-<%
-    }
-%>
-<%
-    if (ticTacToe.isXWinner()) {
-%>
-    Wygrały krzyżyki
-<%
-    }
-%>
+<def:winner board="${board}" />
 </body>
 </html>
