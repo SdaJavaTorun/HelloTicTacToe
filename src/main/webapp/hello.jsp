@@ -1,22 +1,24 @@
-<%@ taglib prefix = "abc" uri = "/WEB-INF/tags.tld"%>
+<%@ page import="pl.sdacademy.model.TicTacToe" %>
+<%@ page import="pl.sdacademy.model.Piesek" %>
+<%@ page import="java.io.IOError" %>
+<%@ page import="java.util.Arrays" %>
+<%@ taglib prefix="abc" uri="/WEB-INF/tags.tld" %>
 <%@ taglib prefix="def" tagdir="/WEB-INF/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>Hello World by JSP</title>
-  </head>
-  <body>
-    <%--Hello <%=request.getAttribute("who") %>!--%>
-    <def:kotek imie="Filemon" nazwisko="Kot"/>
-    <def:kotek imie="Bonifacy" nazwisko="Kot"/>
-    <% String who = (String) request.getAttribute("who"); %>
+</head>
+<body>
 
-  <div>
-    fsdfdsf
-  </div>
+<form action="hello">
+    <input name="age">
+</form>
 
-<abc:Bold><table></table>ABCDFREREW</abc:Bold>
-    <abc:Bold><abc:Hello who="${who}" /></abc:Bold>
-    <def:bold><def:hello who="${who}" /></def:bold>
-  </body>
+Dog is <c:out value="${piesek.age}" /> years old.
+
+
+</body>
 </html>

@@ -1,5 +1,7 @@
 package pl.sdacademy;
 
+import pl.sdacademy.model.Piesek;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,5 +22,9 @@ public class HelloJspServlet extends HttpServlet {
         req.setAttribute("who", who);
         req.getRequestDispatcher("/hello.jsp").forward(req, resp);
     }
-    
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("piesek", new Piesek(Integer.parseInt(req.getParameter("age"))));
+    }
 }
