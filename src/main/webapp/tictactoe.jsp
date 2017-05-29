@@ -1,4 +1,3 @@
-<%@ page import="pl.sdacademy.model.TicTacToe" %>
 <%@ taglib prefix="def" tagdir="/WEB-INF/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -18,6 +17,10 @@
         }
     </style>
 </head>
+<%
+    request.setAttribute("acsss", "fsdfds");
+%>
+${acsss}
 <body>
 <a href="nacisnijpole?nowagra=true">NOWA GRA</a>
 <br/><br/>

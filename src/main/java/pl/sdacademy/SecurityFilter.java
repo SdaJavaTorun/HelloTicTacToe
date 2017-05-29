@@ -3,6 +3,9 @@ package pl.sdacademy;
 import org.apache.log4j.Logger;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.FileOutputStream;
 import java.util.Date;
 
@@ -18,11 +21,12 @@ public class SecurityFilter implements Filter {
                          ServletResponse response,
                          FilterChain chain)
             throws java.io.IOException, ServletException {
-
-        String ipAddress = request.getRemoteAddr();
-        logger.error("IP " + ipAddress + ", Time " + new Date().toString());
-
-        chain.doFilter(request, response);
+        HttpSession session = ((HttpServletRequest) request).getSession();
+        if (session == null || session.getAttribute("username") == null) {
+            ((HttpServletResponse) response).sendRedirect("login");
+        } else {
+            chain.doFilter(request, response);
+        }
     }
 
     public void destroy() {

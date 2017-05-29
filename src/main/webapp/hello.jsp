@@ -18,7 +18,11 @@
 </form>
 
 Dog is <c:out value="${piesek.age}" /> years old.
-
+<br/>
+<br/>
+<br/>
+<br/>
+<a href="logout">LOGOUT</a>
 
 </body>
 </html>
